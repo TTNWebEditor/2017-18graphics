@@ -37,13 +37,13 @@ h1,h2,h3,h4,h5,h6,p {font-family: Roboto;}
 #wbutton {border: none; border-radius: 25px; background: #890817; color: white; font-weight: 300; font-family: Roboto; font-size: .8em; padding: 10px 10px 10px 10px;}
 
 @media only screen and (max-width: 600px) {
-	.athlete {clear: both; margin: -5px 0px -5px 0px;margin-left: -100px; width: fit-content;}
-	.run {display: inline-block; height: 1px; border: 0; border-top: 2px solid #000000; vertical-align: middle; width: 100px;}
+	.athlete {clear: both; margin: -5px 0px -5px 0px;margin-left: -300px; width: fit-content;}
+	.run {display: inline-block; height: 1px; border: 0; border-top: 2px solid #000000; vertical-align: middle; width: 300px;}
 	.transform-active {
-	  transform: translate3d(100px,0,0);
+	  transform: translate3d(300px,0,0);
 	}
 	.wtransform-active {
-	  transform: translate3d(100px,0,0);
+	  transform: translate3d(300px,0,0);
 	}
 	}
 

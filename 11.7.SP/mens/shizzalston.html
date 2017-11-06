@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Roboto,100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic,');
+
+		h1, h2, h3, h4, h5, h6, p, table {font-family: Roboto
+		}
+		p {
+			font-size: 0.9em;
+		}
+		#f1_container {
+			height: 500px;
+			z-index: 1;
+			width: 325px;
+			display: inline-block;
+			margin-right: 25px;
+			margin-bottom: 25px;
+		}
+		#f1_card {
+			height: 100%;
+			transform-style: preserve-3d;
+			transition: all 0.5s linear;
+		}
+		#f1_container:hover #f1_card {
+			transform: rotateY(180deg);
+			box-shadow: -5px 5px 5px #aaa;
+		}
+		.face {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+		}
+		.face.back{
+			display: block;
+			transform: rotateY(180deg);
+			box-sizing: border-box;
+			padding: 10px;
+			text-align: center;
+		}
+		td {
+			font-size: 0.75em;
+			padding: 5px 0px 5px 0px;
+		}
+		tr {
+			border: 1px solid black;
+		}
+		table {
+			text-align: left;
+		}
+		#label {
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	</style>
+	<title>11.7_SPORTS_MENSCARD</title>
+</head>
+
+<body>
+	
+	<!--SHIZZ ALSTON JR.-->
+	<div id="f1_container">
+		<div id="f1_card" class="shadow">
+			<div class="front face">
+				<img style="margin: 0 auto; display: inline-block; max-height: 300px;" src="imgs/test.png"/>
+				<h1>Shizz Alston Jr.</h1>
+				<p>With Josh Brown largely unavailable due to an Achilles injury, Alston started every game of the 2016-17 season. He became the first sophomore to lead Temple in points, assists and steals per game since Mark Macon in the 1988-89 season when Macon won the Atlantic 10 Conference Player of the Year Award. Alston scored in double figures in 20 of his final 23 games of the season.</p>
+			</div>
+			<div class="back face center">
+				<h2>Fast Stats</h2>
+				<table>
+					<tr>
+						<td id="label">Season</td>
+						<td>2016-17</td>
+						<td>2015-16</td>
+					</tr>
+					<tr>
+						<td id="label">Games</td>
+						<td>32</td>
+						<td>31</td>
+					</tr>
+					<tr>
+						<td id="label">Starts</td>
+						<td>32</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td id="label">Minutes</td>
+						<td>36.4</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td id="label">Points</td>
+						<td>13.9</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td id="label">Assists</td>
+						<td>4.1</td>
+						<td>0.6</td>
+					</tr>
+					<tr>
+						<td id="label">Rebounds</td>
+						<td>3.6</td>
+						<td>0.9</td>
+					</tr>
+					<tr>
+						<td id="label">Blocks</td>
+						<td>0.4</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td id="label">3-Point <br>Percentage</td>
+						<td>34.5</td>
+						<td>27.1</td>
+					</tr>
+					<tr>
+						<td id="label">Free-Throw <br>Percentage</td>
+						<td>86.8</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td id="label">Assist-to-<br>Turnover <br>Ratio</td>
+						<td>2.7</td>
+						<td>1.6</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

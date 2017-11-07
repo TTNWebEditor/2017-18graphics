@@ -3,7 +3,6 @@
 <head>
 	<style type="text/css">
 		@import url('https://fonts.googleapis.com/css?family=Roboto,100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic,');
-
 		h1, h2, h3, h4, h5, h6, p, table {font-family: Roboto
 		}
 		p {
@@ -19,23 +18,21 @@
 		}
 		#f1_card {
 			height: 100%;
-			transform-style: preserve-3d;
-			transition: all 0.5s linear;
 			box-shadow: 5px 5px 5px #aaa;
 		}
-		#f1_container:hover #f1_card {
-			transform: rotateY(180deg);
-			box-shadow: -5px 5px 5px #aaa;
+		#f1_container:hover .front {
+			display: none;
+		}
+		#f1_container:hover .back{
+			display: block;
 		}
 		.face {
 			position: absolute;
-			width: 100%;
+			width: 325px;
 			height: 100%;
-			backface-visibility: hidden;
 		}
-		.face.back{
-			display: block;
-			transform: rotateY(180deg);
+		.back{
+			display: none;
 			box-sizing: border-box;
 			padding: 10px;
 			text-align: center;
@@ -51,7 +48,7 @@
 			text-align: left;
 			width: 100%;
 		}
-		#label {
+		td#label {
 			text-transform: uppercase;
 			font-weight: 500;
 		}

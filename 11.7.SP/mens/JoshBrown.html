@@ -22,14 +22,10 @@
 			box-shadow: 5px 5px 5px #aaa;
 		}
 		#f1_container:hover .front {
-			visibility: hidden;
+			display: none;
 		}
 		#f1_container:hover .back{
-			visibility: visible;
-		}
-		.front {
-			transition: .4s ease-in-out visibility;
-
+			display: block;
 		}
 		.face {
 			position: absolute;
@@ -37,7 +33,7 @@
 			height: 100%;
 		}
 		.back{
-			visibility: none;
+			display: none;
 			box-sizing: border-box;
 			padding: 10px;
 			text-align: center;

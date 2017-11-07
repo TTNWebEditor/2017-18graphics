@@ -22,16 +22,18 @@
 			box-shadow: 5px 5px 5px #aaa;
 		}
 		#f1_container:hover .front {
-			opacity: 0
+			display: none;
+		}
+		#f1_container:hover .back{
+			display: block;
 		}
 		.face {
 			position: absolute;
 			width: 325px;
 			height: 100%;
-			backface-visibility: hidden;
 		}
 		.face.back{
-			display: block;
+			display: none;
 			box-sizing: border-box;
 			padding: 10px;
 			text-align: center;

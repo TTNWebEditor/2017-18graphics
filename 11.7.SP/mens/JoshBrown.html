@@ -16,20 +16,20 @@
 			display: inline-block;
 			margin-right: 25px;
 			margin-bottom: 25px;
-			transition: .4s ease-in-out display;
-
 		}
 		#f1_card {
 			height: 100%;
 			box-shadow: 5px 5px 5px #aaa;
 		}
 		#f1_container:hover .front {
-			display: none;
+			visibility: hidden;
 		}
 		#f1_container:hover .back{
-			display: block;
+			visibility: visible;
 		}
 		.front {
+			transition: .4s ease-in-out visibility;
+
 		}
 		.face {
 			position: absolute;
@@ -37,7 +37,7 @@
 			height: 100%;
 		}
 		.face.back{
-			display: none;
+			visibility: none;
 			box-sizing: border-box;
 			padding: 10px;
 			text-align: center;

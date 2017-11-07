@@ -19,15 +19,11 @@
 		}
 		#f1_card {
 			height: 100%;
-			transform-style: preserve-3d;
-			transition: all 0.5s linear;
 			box-shadow: 5px 5px 5px #aaa;
 			background-color: #fafafa;
 		}
-		#f1_container:hover #f1_card {
-			transform: rotateY(180deg);
-			box-shadow: -5px 5px 5px #aaa;
-			opacity: 0;
+		#f1_container:hover .front {
+			opacity: 0
 		}
 		.face {
 			position: absolute;

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    #container {
+	width: 100%;
+	height: 400px;
+	margin: 0 auto
+}
+  </style>
+
+  <title>Highcharts Demo by ttnwebeditor</title>
+
+  
+</head>
+
+<body>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/annotations.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container"></div>
+
+  
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+
+Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'Roboto, sans-serif'
+        }
+    }
+});
+
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Women enrolling in CST and College of Engineering',
+        align: 'left',
+        style: {
+        	fontWeight: 700,
+        }
+    },
+    subtitle: {
+        text: 'Source: 2005-16 student profiles. The College of Engineering has a significantly lower number of students who enroll than CST.',
+        align: 'left',
+    },
+    
+    yAxis: {
+        title: {
+            text: ''
+        }
+    },
+    xAxis: {
+    		title: {
+        	text: ''
+        }
+    },
+    legend: {
+        enabled: false,
+    },
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: true,
+            },
+            marker: {
+                fillColor: '#FFFFFF',
+                lineWidth: 2,
+                lineColor: null // inherit from series
+            },
+            pointStart: 2005
+        }
+    },
+    tooltip: {
+        valueDecimals: 1,
+        valuePrefix: '',
+        valueSuffix: '% women',
+        formatter: function() {
+        return '<b>' + this.y + '%</b> women';
+    }
+    },
+    
+    credits: {
+        enabled: true,
+        text: 'JULIE CHRISTIE / THE TEMPLE NEWS',
+        href: ''
+    },
+    series: [{
+        name: 'College of Engineering',
+        data: [14.5, 14.1, 15.1, 14.9, 14.9, 14.4, 13.3, 14.6, 16.9, 17.1, 18.8, 20.1],
+        color: '#890817',
+        marker: {
+            symbol: 'circle'
+        }
+    }, {
+        name: 'College of Science and Technology',
+        data: [52.7, 53, 52.6, 51.9, 50.6, 48.8, 46.5, 46.9, 45.6, 45.9, 45.9, 45.7],
+        color: '#005a92',
+    }],
+
+});
+//]]> 
+
+</script>
+
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "3fsp6sp2"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
+

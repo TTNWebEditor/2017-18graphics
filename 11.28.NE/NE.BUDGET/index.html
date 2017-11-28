@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    #container {
+	width: 100%;
+	height: 400px;
+	margin: 0 auto
+}
+  </style>
+
+  <title>11.28.NEWS.Property</title>
+
+  
+</head>
+
+<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+  
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+
+Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'Roboto, sans-serif'
+        }
+    }
+});
+
+// Build the chart
+Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'Roboto, sans-serif'
+        }
+    }
+});
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Responses to RCM Rating',
+        align: 'left',
+        style: {
+            fontWeight: 700,
+        }
+    },
+    subtitle: {
+        text: 'Faculty and administrators rated the different principles it was put in place to enforce. The survey used a scale of 1 to 5, representing low to high. | SOURCE: RCM 3 Year Review & Analysis',
+        align: 'left',
+    },
+    xAxis: {
+        categories: ['Mission-driven', 'Fairness', 'Encourage innovation, entrepreneurship and efficiency', 'Simplicity', 'Align authority with responsibility and accountability'],
+        labels: {
+          style:{
+                width:'100px',
+                fontSize: '0.9em'
+          },
+      }
+    },
+    
+    plotOptions: {
+         series: {
+        stacking: 'normal',
+        pointWidth: 50
+        }
+    },
+    yAxis: {
+        min: 0,
+        max: 5,
+        title: false,
+        visible: false,
+    },
+    legend: {
+        enabled:false,
+    },
+    series: [{
+            // Filler space
+            data: [2.25,2.5,2.08,2.43,2.21],
+        color: '#eeeeee',
+        enableMouseTracking: false,
+    },
+    {
+            // Values to fill bar
+        data: [2.75, 2.5, 2.92, 2.57, 2.79],
+        color: '#005a92'
+    }],
+    exporting: {
+        enabled: false
+    },
+    credits: {
+        enabled: true,
+        text: 'GRETA ANDERSON / THE TEMPLE NEWS',
+        href: ''
+    },
+    tooltip: {
+        valueDecimals: 2,
+        valuePrefix: '',
+        valueSuffix: 'out of 5',
+        formatter: function() {
+        return 'rated <b>' + this.y + '</b> out of 5';
+    }
+    },
+});
+//]]> 
+
+</script>
+
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "3fsp6sp2"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
+

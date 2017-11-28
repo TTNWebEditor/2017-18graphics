@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    #container {
+	width: 100%;
+	height: 400px;
+	margin: 0 auto
+}
+  </style>
+
+  <title>11.28.NEWS.Property</title>
+
+  
+</head>
+
+<body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+  
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+
+Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'Roboto, sans-serif'
+        }
+    }
+});
+
+// Build the chart
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Types of properties Temple owns',
+        align: 'left',
+        style: {
+            fontWeight: 700,
+        }
+    },
+    subtitle: {
+        text: 'The second-most common property Temple owns are vacated properties, which include empty lots and abandaned houses. | Source: City of Philadelphia property records.',
+        align: 'left',
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
+    exporting: {
+        enabled: false
+    },
+    credits: {
+        enabled: true,
+        text: 'JULIE CHRISTIE / THE TEMPLE NEWS',
+        href: ''
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'University building',
+            y: 43.62,
+            color: '#0072b9',
+        }, {
+            name: 'Vacant property',
+            y: 26.60,
+            sliced: true,
+            selected: true,
+            color: '#890815',
+        }, {
+            name: 'TUHS',
+            y: 11.70,
+            color: '#008ae0',
+        }, {
+            name: 'Campus housing',
+            y: 7.45,
+            color: '#09a1ff',
+        }, {
+            name: 'Parking',
+            y: 6.38,
+            color: '#30b0ff',
+        }, {
+            name: 'Off-campus housing',
+            y: 4.26,
+            color: '#57bfff',
+        }]
+    }]
+});
+//]]> 
+
+</script>
+
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "3fsp6sp2"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
+

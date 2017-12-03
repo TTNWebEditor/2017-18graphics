@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+p {
+	font-weight: 300;
+    font-size: 0.8em;
+}
+
+h1 {
+  font-weight: 900;
+  text-align: center;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(18,125,194);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inhreit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: -17px;
+    background-color: white;
+    border: 5px solid rgb(18,125,194);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgb(18,125,194);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(18,125,194) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: rgb(18,125,194);
+    position: relative;
+    border-radius: 6px;
+    color: white;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media all and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(18,125,194) transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+
+<H1>HOW TUPD RESPONDS TO STUDENT DEATH</H1>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>Step 1: Responding</h2>
+      <p>As first responders, Temple police officers are often the first people to come in contact with students who have died.</p>
+      <p>First, the responding TUPD officer works with emergency medical services to ensure the student is receiving appropriate care, “unless it’s to the point where it’s obvious we can’t help,” Leone said. “That’s not normally the case. Most times, we’re able to try to do some life-saving policies.”</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Step 2: Securing the area</h2>
+      <p>After a student has received medical care — or has already been pronounced dead — TUPD works to secure the area where the incident occurred. This can manifest in different ways, like roping off an area with caution tape or sending out a TU Alert to the Temple community.</p>
+      <p>The purpose of this step is two-fold: to keep other students safe and to maintain the scene of a crime for any forthcoming investigation.</p>
+      <p>“We make sure that the area where it happened, that there’s no other safety issues,” Leone said. “We don’t want to assume anything at first. We want to make sure it’s safe, make sure that if there is anything suspicious, we proceed a different way.”</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Step 3: Investigating</h2>
+      <p>If a student’s death is determined “suspicious” by police — meaning there is potential criminal activity — then TUPD will involve Philadelphia police or local police in another municipality where an incident occurred. These jurisdictions will work together in the investigation of the crime.</p>
+      <p>“We have our detectives working alongside Philadelphia police,” Leone said. “Some things may even turn into a federal issue, where you’re going to bring in the FBI, that sort of thing. It really depends on the level of what we see initially and how it starts to evolve.”</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Step 4: Telling the family</h2>
+      <p>Though Temple police have certain administrative responsibilities, officers are still involved in what Leone calls “the human factor.”</p>
+      <p>Sometimes, TUPD is responsible for notifying family members of a student’s passing in person. Other times, they’ll work to coordinate a notification process with local police departments closer to a student’s hometown.</p>
+      <p>Temple police grapple with certain challenges in the notification process: How do officers notify family members in the most sensitive way possible? How can they best support people who just learned that someone close to them has died?</p>
+      <p>“We don’t know how they’re going to react,” Leone said. “It’s so emotional. We want to try to work through that.”</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Step 5: Telling the Temple community</h2>
+      <p>Notifying the Temple community is perhaps TUPD’s most nuanced responsibility when a student passes.</p>
+      <p>Sometimes, if an incident presents a danger to the community, Temple police will send out a TU Alert almost immediately. Other times, the department will wait until after the family is notified to tell students, faculty and staff.</p>
+      <p>“That can be a little bit of a challenge,” Leone said. “Sometimes, there may be delays in...putting out a general message to our population because we want to ensure that the family has been notified and they’re being supported. Then we can start moving forward.”</p>
+      <p>And other times, TUPD never alerts the Temple community at all. If this is the case, it’s usually at the family’s request.</p>
+      <p>“We certainly don’t want to add to anyone’s emotional state by putting that information out too soon,” Leone added. “We want to try to get some information out, at least to relieve the stress of our community...but we also want to be sensitive to the family. It’s kind of like this balance.”</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

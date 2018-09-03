@@ -48,7 +48,7 @@ d3.json('https://ttnwebeditor.github.io/2017-18graphics/Census_Tracts_2010.geojs
   var features = mapData.features;
   // Update color scale domain based on data
   color.domain([0, d3.max(features, nameLength)]);
-  // Draw each province as a path
+  // Draw each census tract as a path
   mapLayer.selectAll('path')
       .data(features)
     .enter().append('path')
@@ -63,12 +63,12 @@ d3.json('https://ttnwebeditor.github.io/2017-18graphics/Census_Tracts_2010.geojs
 function nameFn(d){
   return d && d.properties ? d.properties.NAMELSAD10 : null;
 }
-// Get province name length
+// Get census tract name length
 function nameLength(d){
   var n = nameFn(d);
   return n ? n.length : 0;
 }
-// Get province color
+// Get census tract color
 function fillFn(d){
   return color(nameLength(d));
 }
@@ -88,7 +88,7 @@ function clicked(d) {
     k = 1;
     centered = null;
   }
-  // Highlight the clicked province
+  // Highlight the clicked census tract
   mapLayer.selectAll('path')
     .style('fill', function(d){return centered && d===centered ? '#D5708B' : fillFn(d);});
   // Zoom

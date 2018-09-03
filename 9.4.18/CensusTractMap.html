@@ -80,7 +80,7 @@ var bigText = g.append('text')
   .attr('x', 20)
   .attr('y', 45);
 // Load map data
-d3.json('https://ttnwebeditor.github.io/2017-18graphics/Census_Tracts_2010.geojson', function(error, mapData) {
+d3.json('https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json', function(error, mapData) {
   var features = mapData.features;
   // Update color scale domain based on data
   color.domain([0, d3.max(features, nameLength)]);
@@ -97,7 +97,7 @@ d3.json('https://ttnwebeditor.github.io/2017-18graphics/Census_Tracts_2010.geojs
 });
 // Get census tract name
 function nameFn(d){
-  return d && d.properties ? d.properties.NAMELSAD10 : null;
+  return d && d.properties ? d.properties.NOMBRE_DPT : null;
 }
 // Get census tract name length
 function nameLength(d){

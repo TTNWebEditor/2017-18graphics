@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Josefin+Slab|Arvo|Lato|Vollkorn|Abril+Fatface|Old+Standard+TT|Droid+Sans|Lobster|Inconsolata|Montserrat|Playfair+Display|Karla|Alegreya|Libre+Baskerville|Merriweather|Lora|Archivo+Narrow|Neuton|Signika|Questrial|Fjalla+One|Bitter|Varela+Round);
 
 .background {
@@ -39,6 +38,7 @@ text.big-text{
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
+
 var width = 960,
     height = 500,
     centered;
@@ -48,9 +48,9 @@ var color = d3.scale.linear()
   .clamp(true)
   .range(['#fff', '#409A99']);
 var projection = d3.geo.mercator()
-  .scale(1500)
+  .scale(80000)
   // Center the Map in Colombia
-  .center([-74, 4.5])
+  .center([-75.165222, 39.952583])
   .translate([width / 2, height / 2]);
 var path = d3.geo.path()
   .projection(projection);
@@ -79,8 +79,12 @@ var bigText = g.append('text')
   .attr('x', 20)
   .attr('y', 45);
 // Load map data
-d3.json('https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json', function(error, mapData) {
+d3.json("https://raw.githubusercontent.com/TTNWebEditor/2017-18graphics/master/Census_Tracts_2010.geojson", function(error, mapData) {
+  if(error) {
+    return console.log(error);
+  }
   var features = mapData.features;
+  console.log(mapData)
   // Update color scale domain based on data
   color.domain([0, d3.max(features, nameLength)]);
   // Draw each census tract as a path
@@ -96,7 +100,7 @@ d3.json('https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw
 });
 // Get census tract name
 function nameFn(d){
-  return d && d.properties ? d.properties.NOMBRE_DPT : null;
+  return d && d.properties ? d.properties.NAMELSAD10 : null;
 }
 // Get census tract name length
 function nameLength(d){
@@ -140,7 +144,9 @@ function mouseover(d){
 function mouseout(d){
   // Reset census tract color
   mapLayer.selectAll('path')
-    .style('fill', function(d){return centered && d===centered ? '#D5708B' : fillFn(d);});
+    .style('fill', function(d){
+      return centered && d===centered ? '#D5708B' : fillFn(d);
+    });
   // Remove effect text
   effectLayer.selectAll('text').transition()
     .style('opacity', 0)
@@ -152,36 +158,10 @@ function mouseout(d){
 // Just me playing around.
 // You won't need this for a regular map.
 var BASE_FONT = "'Helvetica Neue', Helvetica, Arial, sans-serif";
-var FONTS = [
-  "Open Sans",
-  "Josefin Slab",
-  "Arvo",
-  "Lato",
-  "Vollkorn",
-  "Abril Fatface",
-  "Old StandardTT",
-  "Droid+Sans",
-  "Lobster",
-  "Inconsolata",
-  "Montserrat",
-  "Playfair Display",
-  "Karla",
-  "Alegreya",
-  "Libre Baskerville",
-  "Merriweather",
-  "Lora",
-  "Archivo Narrow",
-  "Neuton",
-  "Signika",
-  "Questrial",
-  "Fjalla One",
-  "Bitter",
-  "Varela Round"
-];
+
 function textArt(text){
-  // Use random font
-  var fontIndex = Math.round(Math.random() * FONTS.length);
-  var fontFamily = FONTS[fontIndex] + ', ' + BASE_FONT;
+ 
+  var fontFamily = BASE_FONT;
   bigText
     .style('font-family', fontFamily)
     .text(text);

@@ -48,7 +48,7 @@ var color = d3.scale.linear()
   .clamp(true)
   .range(['#fff', '#409A99']);
 var projection = d3.geo.mercator()
-  .scale(80000)
+  .scale(50000)
   // Center the Map in Philadelphia
   .center([-75.165222, 39.952583])
   .translate([width / 2, height / 2]);

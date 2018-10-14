@@ -79,7 +79,7 @@ var bigText = g.append('text')
   .attr('x', 20)
   .attr('y', 45);
 // Load map data
-d3.json("https://raw.githubusercontent.com/TTNWebEditor/2017-18graphics/master/Census_Tracts_2010.geojson", function(error, mapData) {
+d3.json("http://data.phl.opendata.arcgis.com/datasets/d67c97376d18456d98e5fa6e00415ad4_0.geojson", function(error, mapData) {
   if(error) {
     return console.log(error);
   }
@@ -100,7 +100,7 @@ d3.json("https://raw.githubusercontent.com/TTNWebEditor/2017-18graphics/master/C
 });
 // Get census tract name
 function nameFn(d){
-  return d && d.properties ? d.properties.NAMELSAD10 : null;
+  return d && d.properties ? d.properties.WARD_NUM : null;
 }
 // Get census tract name length
 function nameLength(d){
